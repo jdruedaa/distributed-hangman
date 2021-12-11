@@ -54,7 +54,6 @@ def draw_hangman(allowed_errors):
 
 
 
-
 def print_solved(word,correct_guesses):
     wordTillNow=""
     for letter in word:
@@ -89,23 +88,23 @@ def solved(word,correct_guesses):
             return False
     return True
 
-
-def main():
-    word="Andrew"
-    correct_guesses=[]
-    allowed_errors: int = 4  # "circle,body,hands,legs"
-    while solved(word,correct_guesses)==False:
-        print('guess a letter:')
-        x = input()
-        allowed_errors=process_word(x,word,correct_guesses,allowed_errors)
-        if allowed_errors==0:
-            draw_hangman(allowed_errors)
-            print("GAME OVER")
-            return 0
-        draw_hangman(allowed_errors)
-        print(correct_guesses)
-        print(allowed_errors)
-        print(print_solved(word,correct_guesses))
-
-
-main()
+#_________________________________________________________________testing______________________________
+# def main():
+#     word="Andrew"
+#     correct_guesses=[]
+#     allowed_errors: int = 4  # "circle,body,hands,legs"
+#     while solved(word,correct_guesses)==False:
+#         print('guess a letter:')
+#         x = input()
+#         allowed_errors=process_word(x,word,correct_guesses,allowed_errors)
+#         if allowed_errors==0:
+#             draw_hangman(allowed_errors)
+#             print("GAME OVER")
+#             return 0
+#         draw_hangman(allowed_errors)
+#         print(correct_guesses)
+#         print(allowed_errors)
+#         print(print_solved(word,correct_guesses))
+#
+#
+# main()
