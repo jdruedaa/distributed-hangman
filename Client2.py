@@ -13,6 +13,7 @@ except socket.error as e:
 response = ClientSocket.recv(1024).decode('utf-8')
 print(response)
 while True:
+
     Input = input('>')
     ClientSocket.send(str.encode(Input))
     response = ClientSocket.recv(1024).decode('utf-8')
